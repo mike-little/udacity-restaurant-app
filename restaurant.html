@@ -14,16 +14,20 @@
 <body class="inside">
   <!-- Beginning header -->
   <header>
-    <!-- Beginning nav -->
+
     <nav>
       <h1><a href="/">Restaurant Reviews</a></h1>
     </nav>
-    <!-- Beginning breadcrumb -->
-    <ul id="breadcrumb" >
-      <li><a href="/">Home</a></li>
-    </ul>
-    <!-- End breadcrumb -->
-    <!-- End nav -->
+
+    <nav aria-label="Breadcrumb" role="navigation" class="breadcrumbNav">
+      <ul id="breadcrumb">
+        <li>
+          <!-- Beginning breadcrumb -->
+          <a href="/">Home</a>
+        </li>
+        <!-- End breadcrumb added in js dynamically -->
+      </ul>
+    </nav>
   </header>
   <!-- End header -->
 
@@ -31,7 +35,7 @@
   <main id="maincontent">
     <!-- Beginning map -->
     <section id="map-container">
-      <div id="map" aria-label="map of restaurant"></div>
+      <div id="map" aria-label="map of restaurant" role="application"></div>
     </section>
     <!-- End map -->
     <!-- Beginning restaurant -->
