@@ -9,8 +9,6 @@ Project involves converting a static Restaurant Review webpage to a mobile-ready
   * Make the app accessible.
   * Add offline support through service worker.
 
-## View Live 
-
 ## Download and Run
 ### Pre-requesites
 #### Python
