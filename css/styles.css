@@ -44,9 +44,10 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   color: #aaa;
   font-size: 8pt;
   letter-spacing: 1px;
-  padding: 25px;
+  padding: 25px 0 25px 0;
   text-align: center;
   text-transform: uppercase;
+  width: 100%;
 }
 #footer a {
   color: white;
@@ -73,38 +74,54 @@ nav h1 a {
   letter-spacing: 10px;
   text-transform: uppercase;
 }
+
+.breadcrumbNav {
+  padding: 0;
+  margin: 0;
+  height: auto;
+  width: 100%;
+  background-color: #eee;
+  text-align:center;
+}
+
 #breadcrumb {
-    padding: 10px 40px 16px;
-    list-style: none;
-    background-color: #eee;
-    font-size: 17px;
-    margin: 0;
-    width: 100%;
+  padding: 10px 0 16px 0;
+  list-style: none;
+  background-color: #eee;
+  font-size: 17px;
+  margin: 0;
+  width: 100%;
+  text-align:center;
+}
+
+#breadcrumb ul {
+  width: 100%;
 }
 
 /* Display list items side by side */
 #breadcrumb li {
-    display: inline;
+  display: inline;
 }
 
 /* Add a slash symbol (/) before/behind each list item */
 #breadcrumb li+li:before {
-    padding: 8px;
-    color: black;
-    content: "/\00a0";
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
 }
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
-    color: #0275d8;
-    text-decoration: none;
+  color: #0275d8;
+  text-decoration: none;
 }
 
 /* Add a color on mouse-over */
 #breadcrumb li a:hover {
-    color: #01447e;
-    text-decoration: underline;
+  color: #01447e;
+  text-decoration: underline;
 }
+
 /* ====================== Map ====================== */
 #map {
   height: 400px;
@@ -163,12 +180,7 @@ nav h1 a {
   flex-direction: column;
 }
 #restaurants-list .restaurant-img {
-  background-color: #ccc;
-  display: block;
-  margin: 0;
-  max-width: 100%;
-  min-height: 50%;
-  min-width: 100%;
+  width: 100%;
 }
 #restaurants-list li h1 {
   color: #9d330e;
@@ -221,6 +233,8 @@ nav h1 a {
   bottom: 0;
   position: absolute;
   width: 100%;
+  padding: 20px 0 20px 0;
+  margin: 0;
 }
 #restaurant-name {
   color: #9d330e;
@@ -307,7 +321,7 @@ nav h1 a {
   }
 }
 
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 1060px) {
   .inside #map-container {
     background: blue none repeat scroll 0 0;
     right: 0;
@@ -317,15 +331,21 @@ nav h1 a {
     top: 95px;
   }
 
-  #restaurant-container {
+  .inside #footer,
+  #restaurant-container,
+  .breadcrumbNav {
     width: 50%;
   }
 
-  .inside #footer , #reviews-container {
+  #reviews-container,
+  #restaurant-name,
+  #restaurant-address,
+  #restaurant-cuisine {
     width: calc(50% - 50px);
   }
 
-  #breadcrumb {
+  #breadcrumb,
+  #breadcrumb ul {
     width: calc(50% - 80px);
   }
 
